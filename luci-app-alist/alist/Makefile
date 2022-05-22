@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=alist
 PKG_VERSION:=2.5.2
 PKG_WEB_VERSION:=2.5.0
-PKG_RELEASE:=3
+PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/Xhofe/alist/tar.gz/v$(PKG_VERSION)?
