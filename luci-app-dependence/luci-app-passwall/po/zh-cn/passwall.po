@@ -1,5 +1,5 @@
-msgid "PassWall 2"
-msgstr "PassWall 2"
+msgid "Pass Wall"
+msgstr "PassWall"
 
 msgid "Auto"
 msgstr "自动"
@@ -21,6 +21,9 @@ msgstr "点我检测"
 
 msgid "Kernel Unsupported"
 msgstr "内核不支持"
+
+msgid "Main Settings"
+msgstr "节点选择"
 
 msgid "Basic Settings"
 msgstr "基本设置"
@@ -79,23 +82,20 @@ msgstr "清除"
 msgid "Main switch"
 msgstr "主开关"
 
-msgid "Node"
-msgstr "节点"
+msgid "TCP Node"
+msgstr "TCP 节点"
+
+msgid "UDP Node"
+msgstr "UDP 节点"
 
 msgid "Edit Current Node"
 msgstr "编辑当前节点"
 
-msgid "Localhost Proxy"
-msgstr "路由器本机代理"
-
-msgid "When selected, localhost can transparent proxy."
-msgstr "当勾选时，路由器本机可以透明代理。"
-
 msgid "Socks Config"
-msgstr "Socks配置"
+msgstr "Socks 配置"
 
 msgid "Socks Node"
-msgstr "Socks节点"
+msgstr "Socks 节点"
 
 msgid "Listen Port"
 msgstr "监听端口"
@@ -103,35 +103,47 @@ msgstr "监听端口"
 msgid "0 is not use"
 msgstr "0为不使用"
 
+msgid "Same as the tcp node"
+msgstr "与TCP节点相同"
+
 msgid "Current node: %s"
 msgstr "当前节点：%s"
 
-msgid "IP:Port mode acceptable, multi value split with english comma."
-msgstr "接受 IP:Port 形式的输入，多个以英文逗号分隔。"
+msgid "Filter Mode"
+msgstr "过滤模式"
 
-msgid "Direct DNS Protocol"
-msgstr "直连 DNS 协议"
+msgid "TCP node must be '%s' type to use FakeDNS."
+msgstr "TCP 节点必须是 '%s' 类型才能使用 FakeDNS。"
 
 msgid "Direct DNS"
 msgstr "直连 DNS"
 
-msgid "Direct DNS DoH"
-msgstr "直连 DNS DoH"
-
-msgid "Direct DNS EDNS Client Subnet"
-msgstr "直连 DNS EDNS Client Subnet"
-
-msgid "Remote DNS Protocol"
-msgstr "远程 DNS 协议"
-
 msgid "Remote DNS"
 msgstr "远程 DNS"
+
+msgid "Resolver For The List Proxied"
+msgstr "解析被代理的域名列表"
+
+msgid "Requery DNS By %s"
+msgstr "通过%s请求DNS"
+
+msgid "Socks Server"
+msgstr "Socks 服务器"
+
+msgid "Misconfigured"
+msgstr "配置不当"
+
+msgid "Make sure socks service is available on this address."
+msgstr "请确保此Socks服务可用。"
+
+msgid "Format must be:"
+msgstr "格式必须为："
 
 msgid "Remote DNS DoH"
 msgstr "远程 DNS DoH"
 
-msgid "Remote DNS EDNS Client Subnet"
-msgstr "远程 DNS EDNS Client Subnet"
+msgid "Cache Resolved"
+msgstr "缓存解析结果"
 
 msgid "Notify the DNS server when the DNS query is notified, the location of the client (cannot be a private IP address)."
 msgstr "用于 DNS 查询时通知 DNS 服务器，客户端所在的地理位置（不能是私有 IP 地址）。"
@@ -139,17 +151,23 @@ msgstr "用于 DNS 查询时通知 DNS 服务器，客户端所在的地理位�
 msgid "This feature requires the DNS server to support the Edns Client Subnet (RFC7871)."
 msgstr "此功能需要 DNS 服务器支持 EDNS Client Subnet（RFC7871）。"
 
-msgid "Direct Query Strategy"
-msgstr "直连查询策略"
+msgid "The effect is better, but will increase the memory."
+msgstr "效果更好，但会增加内存使用。"
 
-msgid "Remote Query Strategy"
-msgstr "远程查询策略"
+msgid "When using the chnroute list the default DNS"
+msgstr "当使用中国列表外时的默认DNS"
 
-msgid "Use FakeDNS work in the shunt domain that proxy."
-msgstr "需要代理的分流规则域名使用 FakeDNS。"
+msgid "Remote DNS can avoid more DNS leaks, but some domestic domain names maybe to proxy!"
+msgstr "远程DNS可以避免更多的DNS泄露，但会导致规则列表外的某些国内域名可能会走代理！"
 
-msgid "Domain Override"
-msgstr "域名重写"
+msgid "Direct DNS Internet experience may be better, but DNS will be leaked!"
+msgstr "直连DNS上网体验可能会更佳，但是会泄露DNS！"
+
+msgid "Filter Proxy Host IPv6"
+msgstr "过滤代理域名 IPv6"
+
+msgid "Experimental feature."
+msgstr "实验性功能。"
 
 msgid "Clear IPSET"
 msgstr "清空 IPSET"
@@ -163,14 +181,17 @@ msgstr "关于DNS问题："
 msgid "Some browsers may have built-in DNS, be sure to close. Example: Chrome. Settings - Security and Privacy - Security - Use secure DNS disabled."
 msgstr "部分浏览器可能有内置的DNS，请务必关闭。如：chrome。 设置 - 安全和隐私设置 - 使用安全 DNS 关闭。"
 
-msgid "Sometimes after restart, you can not internet. At this time, close all browsers (important), Windows Client, please `ipconfig /flushdns`. Please close the WiFi on the phone, cut the flight mode and then cut back."
-msgstr "有时候重启后，上不了。这时请先关闭所有浏览器（重要），Windows客户端请`ipconfig /flushdns`。手机端请关闭WIFI，切一下飞行模式再切回来。"
+msgid "Sometimes after restart, you can not internet, especially the GFW mode. At this time, close all browsers (important), Windows Client, please `ipconfig /flushdns`. Please close the WiFi on the phone, cut the flight mode and then cut back."
+msgstr "有时候重启后，上不了，尤其是GFW模式。这时请先关闭所有浏览器（重要），Windows客户端请`ipconfig /flushdns`。手机端请关闭WIFI，切一下飞行模式再切回来。"
 
 msgid "The client DNS and the default gateway must point to this router."
 msgstr "客户端DNS和默认网关必须指向本路由器。"
 
 msgid "If you have a wrong DNS process, the consequences are at your own risk!"
 msgstr "如果你自行配置了错误的DNS流程，后果自负！"
+
+msgid "You can use load balancing for failover."
+msgstr "可以使用负载均衡实现故障切换功能。"
 
 msgid "Restore the default configuration method. Input example in the address bar:"
 msgstr "恢复默认配置方法，地址栏输入例："
@@ -202,8 +223,53 @@ msgstr "不指定"
 msgid "custom"
 msgstr "自定义"
 
-msgid "If not available, try clearing the cache."
-msgstr "如果无法使用，请尝试清除缓存。"
+msgid "Process"
+msgstr "进程"
+
+msgid "1 Process"
+msgstr "单进程"
+
+msgid "Proxy Mode"
+msgstr "代理模式"
+
+msgid "Default Proxy Mode"
+msgstr "默认代理模式"
+
+msgid "No Proxy"
+msgstr "不代理"
+
+msgid "Global Proxy"
+msgstr "全局代理"
+
+msgid "GFW List"
+msgstr "GFW列表"
+
+msgid "Not China List"
+msgstr "中国列表以外"
+
+msgid "Game Mode"
+msgstr "游戏模式"
+
+msgid "China List"
+msgstr "中国列表"
+
+msgid "Only use direct/proxy list"
+msgstr "仅使用直连/代理列表"
+
+msgid "Localhost"
+msgstr "本机"
+
+msgid "Router Localhost"
+msgstr "路由器本机"
+
+msgid "Same as the %s default proxy mode"
+msgstr "与 %s 默认代理模式相同"
+
+msgid "Want different devices to use different proxy modes/ports/nodes? Please use access control."
+msgstr "希望不同设备使用不同的代理模式/端口/节点？请使用访问控制。"
+
+msgid "China list or gfwlist cannot be used together with outside China list!"
+msgstr "中国列表不能和中国列表外或防火墙表一起使用！"
 
 msgid "Operation"
 msgstr "操作"
@@ -279,6 +345,9 @@ msgstr "负载均衡"
 
 msgid "_shunt"
 msgstr "分流"
+
+msgid "_iface"
+msgstr "接口"
 
 msgid "Balancing"
 msgstr "负载均衡"
@@ -466,6 +535,9 @@ msgstr "组"
 msgid "Auto Ping"
 msgstr "自动Ping"
 
+msgid "Concise display nodes"
+msgstr "简洁显示节点"
+
 msgid "Show server address and port"
 msgstr "显示服务器地址和端口"
 
@@ -518,28 +590,25 @@ msgid "Forwarding Settings"
 msgstr "转发配置"
 
 msgid "TCP No Redir Ports"
-msgstr "TCP不转发端口"
+msgstr "TCP 不转发端口"
 
 msgid "UDP No Redir Ports"
-msgstr "UDP不转发端口"
+msgstr "UDP 不转发端口"
 
 msgid "Fill in the ports you don't want to be forwarded by the agent, with the highest priority."
 msgstr "填写你不希望被代理转发的端口，优先级最高。"
 
-msgid "If you don't want to let the device in the list to go proxy, please choose all."
-msgstr "如果您不想让列表中的设备走代理，请选择全部。"
-
 msgid "TCP Proxy Drop Ports"
-msgstr "TCP转发屏蔽端口"
+msgstr "TCP 转发屏蔽端口"
 
 msgid "UDP Proxy Drop Ports"
-msgstr "UDP转发屏蔽端口"
+msgstr "UDP 转发屏蔽端口"
 
 msgid "TCP Redir Ports"
-msgstr "TCP转发端口"
+msgstr "TCP 转发端口"
 
 msgid "UDP Redir Ports"
-msgstr "UDP转发端口"
+msgstr "UDP 转发端口"
 
 msgid "No patterns are used"
 msgstr "不使用"
@@ -552,12 +621,6 @@ msgstr "常用的"
 
 msgid "Only Web"
 msgstr "仅网页"
-
-msgid "or more"
-msgstr "及以上"
-
-msgid "or less"
-msgstr "及以下"
 
 msgid "Default"
 msgstr "默认"
@@ -581,13 +644,13 @@ msgid "Sniffing Route Only"
 msgstr "流量嗅探只供路由使用"
 
 msgid "TCP Proxy Way"
-msgstr "TCP代理方式"
+msgstr "TCP 代理方式"
+
+msgid "Proxy Settings"
+msgstr "代理配置"
 
 msgid "Auto Switch"
 msgstr "自动切换"
-
-msgid "When there is no server, an automatic reconnect scheme is used"
-msgstr "当没有服务器时，则使用自动重连方案"
 
 msgid "How often to test"
 msgstr "多久检测一次"
@@ -597,9 +660,6 @@ msgstr "超时秒数"
 
 msgid "Timeout retry num"
 msgstr "超时重试次数"
-
-msgid "Automatic switching cannot be used when this option is checked"
-msgstr "当勾选此选项时，不能使用自动切换"
 
 msgid "Main node"
 msgstr "主节点"
@@ -613,8 +673,8 @@ msgstr "恢复切换"
 msgid "When detects main node is available, switch back to the main node."
 msgstr "当检测到主节点可用时，切换回主节点。"
 
-msgid "If the main node is shunt"
-msgstr "如果主节点是分流"
+msgid "If the main node is V2ray/Xray shunt"
+msgstr "如果主节点是V2ray/Xray分流"
 
 msgid "Switch it"
 msgstr "切掉它"
@@ -622,8 +682,8 @@ msgstr "切掉它"
 msgid "Applying to the default node"
 msgstr "应用于默认节点"
 
-msgid "Applying to the default preproxy node"
-msgstr "应用于默认前置节点"
+msgid "Applying to the preproxy node"
+msgstr "应用于前置代理节点"
 
 msgid "Add nodes to the standby node list by keywords"
 msgstr "通过关键字添加节点到备用节点列表"
@@ -633,6 +693,9 @@ msgstr "通过关键字删除备用节点列表的节点"
 
 msgid "Please enter the node keyword, pay attention to distinguish between spaces, uppercase and lowercase."
 msgstr "请输入节点关键字，注意区分空格、大写和小写。"
+
+msgid "Configure this node with 127.0.0.1: this port"
+msgstr "使用127.0.0.1和此端口配置节点"
 
 msgid "Enable Load Balancing"
 msgstr "开启负载均衡"
@@ -670,6 +733,9 @@ msgstr "添加节点，指定出口功能是为多WAN用户准备的。负载比
 msgid "Note that the node configuration parameters for load balancing must be consistent when use TCP health check type, otherwise it cannot be used normally!"
 msgstr "注意，当使用TCP健康检查时负载均衡的节点配置参数必须一致，否则无法正常使用！"
 
+msgid "Node"
+msgstr "节点"
+
 msgid "Node Address"
 msgstr "节点地址"
 
@@ -697,14 +763,29 @@ msgstr "备用"
 msgid "Check update"
 msgstr "检查更新"
 
+msgid "Manually update"
+msgstr "手动更新"
+
+msgid "The latest version: %s, currently does not support automatic update, if you need to update, please compile or download the ipk and then manually install."
+msgstr "最新版本：%s，目前暂不支持自动更新，如需更新，请自行编译或下载ipk然后手动安装。"
+
 msgid "Enable custom URL"
 msgstr "启用自定义规则地址"
 
+msgid "GFW domains(gfwlist) Update URL"
+msgstr "防火墙域名列表(gfwlist)更新URL"
+
+msgid "China IPs(chnroute) Update URL"
+msgstr "中国IP段(chnroute)更新URL"
+
+msgid "China IPv6s(chnroute6) Update URL"
+msgstr "中国IPv6段(chnroute6)更新URL"
+
+msgid "China List(Chnlist) Update URL"
+msgstr "中国域名列表(Chnlist)更新URL"
+
 msgid "Rule status"
 msgstr "规则版本"
-
-msgid "Manually update"
-msgstr "手动更新"
 
 msgid "Enable auto update rules"
 msgstr "开启自动更新规则"
@@ -958,6 +1039,9 @@ msgstr "从文件中加载 IP: 形如'ext:file:tag'，必须以ext:（小写）�
 msgid "Clear logs"
 msgstr "清空日志"
 
+msgid "Only recommend to use with VLESS-TCP-XTLS-Vision."
+msgstr "只推荐与 VLESS-TCP-XTLS-Vision 搭配使用。"
+
 msgid "Password"
 msgstr "密码"
 
@@ -978,6 +1062,9 @@ msgstr "本地端口"
 
 msgid "Fast Open"
 msgstr "快速打开"
+
+msgid "Need node support required"
+msgstr "需要节点支持"
 
 msgid "plugin"
 msgstr "插件"
@@ -1011,6 +1098,9 @@ msgstr "使用TLS"
 
 msgid "Naiveproxy Protocol"
 msgstr "Naiveproxy协议"
+
+msgid "V2ray Protocol"
+msgstr "V2ray协议"
 
 msgid "User Level"
 msgstr "用户等级(level)"
@@ -1121,7 +1211,7 @@ msgid "Auth"
 msgstr "身份认证"
 
 msgid "Socks for authentication"
-msgstr "Socks认证方式"
+msgstr "Socks 认证方式"
 
 msgid "Socks protocol authentication, support anonymous and password."
 msgstr "Socks 协议的认证方式，支持匿名方式和账号密码方式。"
@@ -1134,6 +1224,12 @@ msgstr "账号密码"
 
 msgid "Username and Password must be used together!"
 msgstr "账号和密码必须同时使用！"
+
+msgid "Node Number"
+msgstr "节点数量"
+
+msgid "You can only set up a maximum of %s nodes for the time being, Used for access control."
+msgstr "目前最多只能设置%s个节点，用于给访问控制使用。"
 
 msgid "Firewall tools"
 msgstr "防火墙工具"
@@ -1237,20 +1333,38 @@ msgstr "日志"
 msgid "Log"
 msgstr "日志"
 
-msgid "Close Node Log"
-msgstr "关闭节点日志"
+msgid "%s Node Log Close"
+msgstr "%s 节点日志关闭"
 
 msgid "Log Level"
 msgstr "日志等级"
+
+msgid "Advanced log feature"
+msgstr "高级日志功能"
+
+msgid "For professionals only."
+msgstr "仅限专业人士使用。"
+
+msgid "Persist log file directory"
+msgstr "持久性日志文件目录"
+
+msgid "The path to the directory used to store persist log files, the \"/\" at the end can be omitted. Leave it blank to disable this feature."
+msgstr "用来存储持久性日志文件的目录路径，末尾的 “/” 可以省略。留空以禁用此功能。"
+
+msgid "Logging to system log"
+msgstr "记录到系统日志"
+
+msgid "Logging to the system log for more advanced functions. For example, send logs to a dedicated log server."
+msgstr "将日志记录到系统日志，以实现更加高级的功能。例如，把日志发送到专门的日志服务器。"
 
 msgid "Not enabled log"
 msgstr "未启用日志"
 
 msgid "UDP Forward"
-msgstr "UDP转发"
+msgstr "UDP 转发"
 
 msgid "DNS Settings"
-msgstr "DNS设置"
+msgstr "DNS 设置"
 
 msgid "Null"
 msgstr "无"
@@ -1259,7 +1373,7 @@ msgid "You did not fill in the %s path. Please save and apply then update manual
 msgstr "您没有填写 %s 路径。请保存应用后再手动更新。"
 
 msgid "Not installed %s, Can't unzip!"
-msgstr "未安装 %s，无法解压。"
+msgstr "未安装 %s，无法解压！"
 
 msgid "Can't determine ARCH, or ARCH not supported."
 msgstr "无法确认ARCH架构，或是不支持。"
@@ -1345,18 +1459,6 @@ msgstr "缓冲区大小"
 msgid "Buffer size for every connection (kB)"
 msgstr "每一个连接的缓冲区大小（kB）"
 
-msgid "Custom geoip Path"
-msgstr "自定义geoip文件路径"
-
-msgid "Custom geoip URL"
-msgstr "自定义geoip文件更新链接"
-
-msgid "Custom geosite Path"
-msgstr "自定义geosite文件路径"
-
-msgid "Custom geosite URL"
-msgstr "自定义geosite文件更新链接"
-
 msgid "Handshake Timeout"
 msgstr "握手超时 "
 
@@ -1368,6 +1470,18 @@ msgstr "端口跳跃时间 "
 
 msgid "Additional ports for hysteria hop"
 msgstr "端口跳跃额外端口"
+
+msgid "Custom geoip Path"
+msgstr "自定义geoip文件路径"
+
+msgid "Custom geoip URL"
+msgstr "自定义geoip文件更新链接"
+
+msgid "Custom geosite Path"
+msgstr "自定义geosite文件路径"
+
+msgid "Custom geosite URL"
+msgstr "自定义geosite文件更新链接"
 
 msgid "Override the connection destination address"
 msgstr "覆盖连接目标地址"
