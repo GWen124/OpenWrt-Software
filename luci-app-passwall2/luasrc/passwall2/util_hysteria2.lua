@@ -1,5 +1,5 @@
-module("luci.passwall.util_hysteria2", package.seeall)
-local api = require "luci.passwall.api"
+module("luci.passwall2.util_hysteria2", package.seeall)
+local api = require "luci.passwall2.api"
 local uci = api.uci
 local jsonc = api.jsonc
 
@@ -36,9 +36,7 @@ function gen_config(var)
 		print("-node 不能为空")
 		return
 	end
-	local node = uci:get_all("passwall", node_id)
-	local local_tcp_redir_port = var["-local_tcp_redir_port"]
-	local local_udp_redir_port = var["-local_udp_redir_port"]
+	local node = uci:get_all("passwall2", node_id)
 	local local_socks_address = var["-local_socks_address"] or "0.0.0.0"
 	local local_socks_port = var["-local_socks_port"]
 	local local_socks_username = var["-local_socks_username"]
@@ -47,7 +45,6 @@ function gen_config(var)
 	local local_http_port = var["-local_http_port"]
 	local local_http_username = var["-local_http_username"]
 	local local_http_password = var["-local_http_password"]
-	local tcp_proxy_way = var["-tcp_proxy_way"]
 	local server_host = var["-server_host"] or node.address
 	local server_port = var["-server_port"] or node.port
 
@@ -101,15 +98,6 @@ function gen_config(var)
 			listen = local_http_address .. ":" .. local_http_port,
 			username = (local_http_username and local_http_password) and local_http_username or nil,
 			password = (local_http_username and local_http_password) and local_http_password or nil,
-		} or nil,
-		tcpRedirect = ("redirect" == tcp_proxy_way and local_tcp_redir_port) and {
-			listen = "0.0.0.0:" .. local_tcp_redir_port
-		} or nil,
-		tcpTProxy = ("tproxy" == tcp_proxy_way and local_tcp_redir_port) and {
-			listen = "0.0.0.0:" .. local_tcp_redir_port
-		} or nil,
-		udpTProxy = (local_udp_redir_port) and {
-			listen = "0.0.0.0:" .. local_udp_redir_port
 		} or nil
 	}
 
