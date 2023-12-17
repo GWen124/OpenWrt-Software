@@ -8,14 +8,14 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=airconnect
-PKG_VERSION:=1.0.13
+PKG_VERSION:=1.3.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_VERSION:=9fc8c184da22d6b34a5b093f6ec8cf6ecaf22dbf
+PKG_SOURCE_VERSION:=c3dfcdb3eefbe6d473c49db9bb2d5e46d9f6af6d
 PKG_SOURCE_URL_FILE:=$(PKG_SOURCE_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/philippe44/AirConnect/archive/
-PKG_HASH:=0da27af9a1d49cd83f8381453d5e1b9c6551ad1ce45bbb7b820e5499796c5440
+PKG_HASH:=skip
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)/AirConnect-$(PKG_SOURCE_VERSION)
 
@@ -27,6 +27,7 @@ define Package/$(PKG_NAME)
   SECTION:=multimedia
   CATEGORY:=Multimedia
   TITLE:=AirConnect
+  DEPENDS:=+libpthread
   URL:=https://github.com/philippe44/AirConnect
 endef
 
